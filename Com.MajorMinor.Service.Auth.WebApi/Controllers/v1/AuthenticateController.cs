@@ -86,7 +86,7 @@ namespace Com.MajorMinor.Service.Auth.WebApi.Controllers.v1
 
                     foreach(var store in viewModel.stores)
                     {
-                        jsonStore = jsonStore + "{" + "\"" + "_id" + "\"" + ":" + store.Id + ","
+                        jsonStore = jsonStore + "{" + "\"" + "_id" + "\"" + ":" + "\"" + store.Id + "\"" + ","
                             + "\"" + nameof(store.code) + "\"" + ":" + "\"" + store.code + "\"" +  ","
                             + "\"" + nameof(store.name) + "\"" + ":" + "\"" + store.name + "\"" + ","
                             + "\"" + nameof(store.address) + "\"" + " : " + "\"" + store.address + "\"" + ","
