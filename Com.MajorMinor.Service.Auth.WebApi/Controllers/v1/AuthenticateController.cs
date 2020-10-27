@@ -94,8 +94,14 @@ namespace Com.MajorMinor.Service.Auth.WebApi.Controllers.v1
                             + "\"" + nameof(store.salesCapital) + "\"" + " : " + "\"" + store.salesCapital + "\"" + "}" + ",";
                     }
 
-
-                    jsonStore = jsonStore.Remove(jsonStore.Length - 1) + "]";
+                    if(jsonStore == "[")
+                    {
+                        jsonStore = jsonStore + "]";
+                    }
+                    else
+                    {
+                        jsonStore = jsonStore.Remove(jsonStore.Length - 1) + "]";
+                    }
 
                     var jsonStoreObject = JArray.Parse(jsonStore);
 
