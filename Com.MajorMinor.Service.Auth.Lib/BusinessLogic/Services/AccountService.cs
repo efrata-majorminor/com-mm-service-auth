@@ -182,7 +182,7 @@ namespace Com.MajorMinor.Service.Auth.Lib.BusinessLogic.Services
                 DbContext.Set<Store>().Add(item);
             }
 
-            foreach (var item in deletedRoles)
+            foreach (var item in deletedstore)
             {
                 EntityExtension.FlagForDelete(item, IdentityService.Username, UserAgent, true);
             }
