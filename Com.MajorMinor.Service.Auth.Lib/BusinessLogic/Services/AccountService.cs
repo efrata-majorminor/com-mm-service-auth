@@ -146,7 +146,7 @@ namespace Com.MajorMinor.Service.Auth.Lib.BusinessLogic.Services
 
             var updatedstore = model.Stores.Where(x => data.Stores.Any(y => y.Id == x.Id));
             var addedstore = model.Stores.Where(x => !data.Stores.Any(y => y.Id == x.Id));
-            var deletedstore = data.Stores.Where(x => !model.AccountRoles.Any(y => y.Id == x.Id));
+            var deletedstore = data.Stores.Where(x => !model.Stores.Any(y => y.Id == x.Id));
 
             foreach (var item in updatedRoles)
             {
